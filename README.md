@@ -12,18 +12,81 @@
 
 </div>
 
-## Branch notes: `main`
+## Branch notes: `dev`
 
-**Overview:** This branch represents the completed coursework submission and serves as the stable reference version for portfolio review. 
+**Overview:** Development branch for upcoming features beyond v1.0.0.
 
 **Notes**
 
-- Task creation
-- countdown timers
-- basic progress statistics
-- Lightweight routine management interface built with vanilla JavaScript
+The current main release provides task management, timer functionality, and statistics tracking in vanilla JavaScript. Future iterations will explore enhanced reminder scheduling, notification systems, habit-building workflows, optional focus-enforcement mechanics, UI/UX refinements, and architectural improvements as the project evolves.
 
-Status: Stable portfolio release (`v1.0.0`)
+**Status**: v1.0.0 - Initial Portfolio Release
+
+## Features
+
+- Create custom routines and reminders
+- Configure fixed or recurring reminder intervals
+- Set reminders for specific times of day
+- Optional focus-lock periods after reminders trigger
+- Support for short tasks (drink water, vocabulary prompt)
+- Support for longer activities (stretching, exercise, walking)
+- User-friendly routine management interface
+- Customisable reminder schedules and durations
+
+## Architecture at a Glance
+
+```mermaid
+flowchart LR
+    U[User] --> A[Mobile App]
+
+    A --> R[Routine Manager]
+    A --> N[Notification Service]
+    A --> L[Lock Controller]
+
+    R --> D["(Local Storage)"]
+
+    N --> T[Reminder Trigger]
+
+    T --> L
+    T --> U
+
+    L --> F[Focus Lock Period]
+```
+
+## User Journey
+
+```mermaid
+journey
+    title Task Creation and Completion
+    section Create Routine
+      Open App: 5: User
+      Create Task: 5: User
+      Configure Schedule: 4: User
+      Set Lock Duration: 4: User
+
+    section Reminder Trigger
+      Receive Notification: 5: User
+      Open Task Prompt: 4: User
+
+    section Accountability
+      Complete Activity: 5: User
+      Lock Expires: 4: System
+      Return to Work: 5: User
+```
+
+## Quick Setup
+
+```bash
+# Clone repository
+git clone https://github.com/arzen1kos/oarbit-mobile-app.git
+cd oarbit-mobile-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
 
 ## Academic Integrity Notice
 >
