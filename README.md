@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="100" height="100" alt="oarbit-app-logo" src="https://github.com/user-attachments/assets/b0a3eefe-9ca3-402d-9721-a73547030ff4" />
+   <img width="100" height="100" alt="oarbit-app-logo" src="https://github.com/user-attachments/assets/877c7cd7-091a-413a-a00c-e1cbb713fe4b" />
   
 # OarBit | Habit & Routine Companion App 
 ![JavaScript](https://img.shields.io/badge/JavaScript-f6de07?style=for-the-badge&logo=javascript&logoColor=black)
